@@ -40,6 +40,8 @@ jobs:
         
       - name: Update code in "temporary" branch
         run: |
+          git config --global user.email "you@example.com"
+          git config --global user.name "Yuriy"
           git checkout -b temporary
           git add .
           git commit -m "Update code in temporary branch"
