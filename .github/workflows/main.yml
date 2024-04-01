@@ -30,7 +30,8 @@ jobs:
           python db.py -a
 
       - name: Build application
-        run: python app.py --host localhost --port 5000
+        run: python app.py --host localhost --port 5000 &
+        shell: bash
 
       - name: Test application
         run: 'here should be some tests'
