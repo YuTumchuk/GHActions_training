@@ -16,6 +16,7 @@ api = Api(app)
 
 
 # Define the resources
+# Just to do smtng
 class Products(Resource):
     def get(self):
         return [product.to_dict() for product in ProductModel.select()]
