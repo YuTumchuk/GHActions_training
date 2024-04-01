@@ -34,5 +34,5 @@ jobs:
         shell: bash
 
       - name: Test application
-        run: 'here should be some tests'
+        run: echo "Tests to be added"
     
