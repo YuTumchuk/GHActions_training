@@ -12,6 +12,8 @@ jobs:
     
       - name: Checkout code
         uses: actions/checkout@v3
+        with:
+          ref: main
       
       - name: Setup Python
         uses: actions/setup-python@v2
@@ -22,6 +24,10 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
+          
+      - name: Fill in the db.
+        run: |
+          python db.py -a
 
       - name: Build application
         run: python app.py --host localhost --port 5000
